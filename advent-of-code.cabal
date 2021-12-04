@@ -1,0 +1,361 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           advent-of-code
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/Gipphe/advent-of-code#readme>
+homepage:       https://github.com/Gipphe/advent-of-code#readme
+bug-reports:    https://github.com/Gipphe/advent-of-code/issues
+author:         Victor Nascimento Bakke
+maintainer:     gipphe@gmail.com
+copyright:      2021 Victor Nascimento Bakke
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/Gipphe/advent-of-code
+
+library
+  exposed-modules:
+      Day
+      Lib
+      Report
+      Util
+      Y2020
+      Y2020.Day1
+      Y2020.Day10
+      Y2020.Day11
+      Y2020.Day12
+      Y2020.Day13
+      Y2020.Day14
+      Y2020.Day15
+      Y2020.Day16
+      Y2020.Day17
+      Y2020.Day18
+      Y2020.Day19
+      Y2020.Day2
+      Y2020.Day3
+      Y2020.Day4
+      Y2020.Day5
+      Y2020.Day6
+      Y2020.Day7
+      Y2020.Day8
+      Y2020.Day9
+      Y2020.Input
+      Y2021
+      Y2021.Day1
+      Y2021.Day2
+      Y2021.Day3
+      Y2021.Input
+      Year
+  other-modules:
+      Paths_advent_of_code
+  hs-source-dirs:
+      src
+  default-extensions:
+      AllowAmbiguousTypes
+      ApplicativeDo
+      BangPatterns
+      BlockArguments
+      ConstraintKinds
+      DataKinds
+      DefaultSignatures
+      DeriveFoldable
+      DeriveFunctor
+      DeriveGeneric
+      DeriveLift
+      DeriveTraversable
+      DerivingStrategies
+      DerivingVia
+      DoAndIfThenElse
+      DuplicateRecordFields
+      EmptyCase
+      EmptyDataDecls
+      ExistentialQuantification
+      FlexibleContexts
+      FlexibleInstances
+      FunctionalDependencies
+      GADTs
+      GeneralizedNewtypeDeriving
+      InstanceSigs
+      KindSignatures
+      LambdaCase
+      MultiParamTypeClasses
+      MultiWayIf
+      NamedFieldPuns
+      NumericUnderscores
+      PartialTypeSignatures
+      PatternGuards
+      PatternSynonyms
+      PolyKinds
+      RankNTypes
+      ScopedTypeVariables
+      StandaloneDeriving
+      StrictData
+      TupleSections
+      TypeApplications
+      TypeFamilies
+      TypeFamilyDependencies
+      TypeOperators
+      ViewPatterns
+      UnicodeSyntax
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wpartial-fields -Wredundant-constraints -flate-specialise -fspecialise-aggressively -fplugin=Polysemy.Plugin
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , deepseq
+    , file-embed
+    , hashable
+    , megaparsec
+    , parser-combinators
+    , polysemy
+    , polysemy-plugin
+    , text
+    , time
+    , vector
+  default-language: Haskell2010
+
+executable advent-of-code-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_advent_of_code
+  hs-source-dirs:
+      app
+  default-extensions:
+      AllowAmbiguousTypes
+      ApplicativeDo
+      BangPatterns
+      BlockArguments
+      ConstraintKinds
+      DataKinds
+      DefaultSignatures
+      DeriveFoldable
+      DeriveFunctor
+      DeriveGeneric
+      DeriveLift
+      DeriveTraversable
+      DerivingStrategies
+      DerivingVia
+      DoAndIfThenElse
+      DuplicateRecordFields
+      EmptyCase
+      EmptyDataDecls
+      ExistentialQuantification
+      FlexibleContexts
+      FlexibleInstances
+      FunctionalDependencies
+      GADTs
+      GeneralizedNewtypeDeriving
+      InstanceSigs
+      KindSignatures
+      LambdaCase
+      MultiParamTypeClasses
+      MultiWayIf
+      NamedFieldPuns
+      NumericUnderscores
+      PartialTypeSignatures
+      PatternGuards
+      PatternSynonyms
+      PolyKinds
+      RankNTypes
+      ScopedTypeVariables
+      StandaloneDeriving
+      StrictData
+      TupleSections
+      TypeApplications
+      TypeFamilies
+      TypeFamilyDependencies
+      TypeOperators
+      ViewPatterns
+      UnicodeSyntax
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wpartial-fields -Wredundant-constraints -flate-specialise -fspecialise-aggressively -fplugin=Polysemy.Plugin -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      advent-of-code
+    , base >=4.7 && <5
+    , containers
+    , deepseq
+    , file-embed
+    , hashable
+    , megaparsec
+    , parser-combinators
+    , polysemy
+    , polysemy-plugin
+    , text
+    , time
+    , vector
+  default-language: Haskell2010
+
+test-suite advent-of-code-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Y2020.Day10Spec
+      Y2020.Day11Spec
+      Y2020.Day12Spec
+      Y2020.Day13Spec
+      Y2020.Day14Spec
+      Y2020.Day15Spec
+      Y2020.Day16Spec
+      Y2020.Day17Spec
+      Y2020.Day18Spec
+      Y2020.Day19Spec
+      Y2020.Day1Spec
+      Y2020.Day2Spec
+      Y2020.Day3Spec
+      Y2020.Day4Spec
+      Y2020.Day5Spec
+      Y2020.Day6Spec
+      Y2020.Day7Spec
+      Y2020.Day8Spec
+      Y2020.Day9Spec
+      Y2021.Day1Spec
+      Y2021.Day2Spec
+      Y2021.Day3Spec
+      Paths_advent_of_code
+  hs-source-dirs:
+      test
+  default-extensions:
+      AllowAmbiguousTypes
+      ApplicativeDo
+      BangPatterns
+      BlockArguments
+      ConstraintKinds
+      DataKinds
+      DefaultSignatures
+      DeriveFoldable
+      DeriveFunctor
+      DeriveGeneric
+      DeriveLift
+      DeriveTraversable
+      DerivingStrategies
+      DerivingVia
+      DoAndIfThenElse
+      DuplicateRecordFields
+      EmptyCase
+      EmptyDataDecls
+      ExistentialQuantification
+      FlexibleContexts
+      FlexibleInstances
+      FunctionalDependencies
+      GADTs
+      GeneralizedNewtypeDeriving
+      InstanceSigs
+      KindSignatures
+      LambdaCase
+      MultiParamTypeClasses
+      MultiWayIf
+      NamedFieldPuns
+      NumericUnderscores
+      PartialTypeSignatures
+      PatternGuards
+      PatternSynonyms
+      PolyKinds
+      RankNTypes
+      ScopedTypeVariables
+      StandaloneDeriving
+      StrictData
+      TupleSections
+      TypeApplications
+      TypeFamilies
+      TypeFamilyDependencies
+      TypeOperators
+      ViewPatterns
+      UnicodeSyntax
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wpartial-fields -Wredundant-constraints -flate-specialise -fspecialise-aggressively -fplugin=Polysemy.Plugin -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      advent-of-code
+    , base >=4.7 && <5
+    , containers
+    , deepseq
+    , file-embed
+    , hashable
+    , megaparsec
+    , parser-combinators
+    , polysemy
+    , polysemy-plugin
+    , tasty
+    , tasty-discover
+    , tasty-hunit
+    , text
+    , time
+    , vector
+  default-language: Haskell2010
+
+benchmark advent-of-code-profile
+  type: exitcode-stdio-1.0
+  main-is: Profile.hs
+  other-modules:
+      Paths_advent_of_code
+  hs-source-dirs:
+      profile
+  default-extensions:
+      AllowAmbiguousTypes
+      ApplicativeDo
+      BangPatterns
+      BlockArguments
+      ConstraintKinds
+      DataKinds
+      DefaultSignatures
+      DeriveFoldable
+      DeriveFunctor
+      DeriveGeneric
+      DeriveLift
+      DeriveTraversable
+      DerivingStrategies
+      DerivingVia
+      DoAndIfThenElse
+      DuplicateRecordFields
+      EmptyCase
+      EmptyDataDecls
+      ExistentialQuantification
+      FlexibleContexts
+      FlexibleInstances
+      FunctionalDependencies
+      GADTs
+      GeneralizedNewtypeDeriving
+      InstanceSigs
+      KindSignatures
+      LambdaCase
+      MultiParamTypeClasses
+      MultiWayIf
+      NamedFieldPuns
+      NumericUnderscores
+      PartialTypeSignatures
+      PatternGuards
+      PatternSynonyms
+      PolyKinds
+      RankNTypes
+      ScopedTypeVariables
+      StandaloneDeriving
+      StrictData
+      TupleSections
+      TypeApplications
+      TypeFamilies
+      TypeFamilyDependencies
+      TypeOperators
+      ViewPatterns
+      UnicodeSyntax
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wpartial-fields -Wredundant-constraints -flate-specialise -fspecialise-aggressively -fplugin=Polysemy.Plugin -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      advent-of-code
+    , base >=4.7 && <5
+    , containers
+    , deepseq
+    , file-embed
+    , hashable
+    , megaparsec
+    , parser-combinators
+    , polysemy
+    , polysemy-plugin
+    , text
+    , time
+    , vector
+  default-language: Haskell2010

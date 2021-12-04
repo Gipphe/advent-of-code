@@ -1,0 +1,131 @@
+name: advent-of-code
+version: 0.1.0.0
+github: "Gipphe/advent-of-code"
+license: BSD3
+author: "Victor Nascimento Bakke"
+maintainer: "gipphe@gmail.com"
+copyright: "2021 Victor Nascimento Bakke"
+
+extra-source-files:
+  - README.md
+  - ChangeLog.md
+
+description: Please see the README on GitHub at <https://github.com/Gipphe/advent-of-code#readme>
+
+dependencies:
+  - name: base
+    version: ">= 4.7 && < 5"
+    # mixin:
+    #   - hiding (Prelude)
+  - containers
+  - deepseq
+  - file-embed
+  - hashable
+  - megaparsec
+  - parser-combinators
+  - polysemy
+  - polysemy-plugin
+  - text
+  - time
+  - vector
+
+default-extensions:
+  - AllowAmbiguousTypes
+  - ApplicativeDo
+  - BangPatterns
+  - BlockArguments
+  - ConstraintKinds
+  - DataKinds
+  - DefaultSignatures
+  - DeriveFoldable
+  - DeriveFunctor
+  - DeriveGeneric
+  - DeriveLift
+  - DeriveTraversable
+  - DerivingStrategies
+  - DerivingVia
+  - DoAndIfThenElse
+  - DuplicateRecordFields
+  - EmptyCase
+  - EmptyDataDecls
+  - ExistentialQuantification
+  - FlexibleContexts
+  - FlexibleInstances
+  - FunctionalDependencies
+  - GADTs
+  - GeneralizedNewtypeDeriving
+  - InstanceSigs
+  - KindSignatures
+  - LambdaCase
+  - MultiParamTypeClasses
+  - MultiWayIf
+  - NamedFieldPuns
+  - NumericUnderscores
+  - PartialTypeSignatures
+  - PatternGuards
+  - PatternSynonyms
+  - PolyKinds
+  - RankNTypes
+  - ScopedTypeVariables
+  - StandaloneDeriving
+  - StrictData
+  - TupleSections
+  - TypeApplications
+  - TypeFamilies
+  - TypeFamilyDependencies
+  - TypeOperators
+  - ViewPatterns
+  - UnicodeSyntax
+
+ghc-options:
+  # Warnings and safety
+  - -Wall
+  - -Wcompat
+  - -Widentities
+  - -Wincomplete-record-updates
+  - -Wincomplete-uni-patterns
+  - -Wpartial-fields
+  - -Wredundant-constraints
+  # Optimizations
+  - -flate-specialise
+  - -fspecialise-aggressively
+  - -fplugin=Polysemy.Plugin # Broken on Windows for the time being
+
+library:
+  source-dirs: src
+
+executables:
+  advent-of-code-exe:
+    main: Main.hs
+    source-dirs: app
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - advent-of-code
+
+tests:
+  advent-of-code-test:
+    main: Spec.hs
+    source-dirs: test
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - advent-of-code
+      - tasty
+      - tasty-hunit
+      - tasty-discover
+
+benchmarks:
+  advent-of-code-profile:
+    main: Profile.hs
+    source-dirs: profile
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - advent-of-code
