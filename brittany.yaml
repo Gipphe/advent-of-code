@@ -5,6 +5,7 @@ conf_layout:
 conf_forward:
   options_ghc:
     - -XBangPatterns
+    - -XBlockArguments
     - -XConstraintKinds
     - -XDataKinds
     - -XDefaultSignatures

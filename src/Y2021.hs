@@ -6,7 +6,8 @@ import Y2021.Day1
 import Y2021.Day2
 import Y2021.Day3
 import Y2021.Day4
+import Y2021.Day5
 import Year
 
 y2021 :: IO ()
-y2021 = runYear 2021 [someDay1, someDay2, someDay3, someDay4]
+y2021 = runYear 2021 [someDay1, someDay2, someDay3, someDay4, someDay5]
