@@ -27,7 +27,7 @@ library
   exposed-modules:
       Day
       Lib
-      Report
+      Run
       Util
       Y2020
       Y2020.Day1
@@ -56,6 +56,9 @@ library
       Y2021.Day3
       Y2021.Day4
       Y2021.Day5
+      Y2021.Day6
+      Y2021.Day7
+      Y2021.Day8
       Y2021.Input
       Year
   other-modules:
@@ -120,6 +123,7 @@ library
     , parser-combinators
     , polysemy
     , polysemy-plugin
+    , table-layout
     , text
     , time
     , vector
@@ -190,6 +194,7 @@ executable advent-of-code-exe
     , parser-combinators
     , polysemy
     , polysemy-plugin
+    , table-layout
     , text
     , time
     , vector
@@ -223,6 +228,9 @@ test-suite advent-of-code-test
       Y2021.Day3Spec
       Y2021.Day4Spec
       Y2021.Day5Spec
+      Y2021.Day6Spec
+      Y2021.Day7Spec
+      Y2021.Day8Spec
       Paths_advent_of_code
   hs-source-dirs:
       test
@@ -285,6 +293,7 @@ test-suite advent-of-code-test
     , parser-combinators
     , polysemy
     , polysemy-plugin
+    , table-layout
     , tasty
     , tasty-discover
     , tasty-hunit
@@ -359,6 +368,7 @@ benchmark advent-of-code-profile
     , parser-combinators
     , polysemy
     , polysemy-plugin
+    , table-layout
     , text
     , time
     , vector
