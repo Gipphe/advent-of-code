@@ -1,4 +1,11 @@
-module Y2021.Day3 where
+module Y2021.Day3
+    ( someDay3
+    , day3Task1
+    , day3Task2
+    , computeTask1
+    , computeTask2
+    , input
+    ) where
 
 import Control.Arrow ((&&&))
 import Data.Foldable (foldl')
@@ -45,9 +52,6 @@ computeDumb decide = go 0
     go _   [x] = x
     go idx xs  = go (idx + 1) $ filter (\x -> x !! idx == ref) xs
         where ref = decide . average $ transpose xs !! idx
-
-gammaAndEpsilon :: [[Int]] -> [(Int, Int)]
-gammaAndEpsilon = fmap ((gammaRate &&& epsilonRate) . average) . transpose
 
 average :: [Int] -> Double
 average xs

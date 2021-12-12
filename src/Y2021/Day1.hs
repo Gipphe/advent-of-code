@@ -1,4 +1,11 @@
-module Y2021.Day1 where
+module Y2021.Day1
+    ( someDay1
+    , day1Task1
+    , day1Task2
+    , computeTask1
+    , computeTask2
+    , input
+    ) where
 
 import Day (Day, SomeDay(..), Task, runTask)
 import Y2021.Input (day1Input)

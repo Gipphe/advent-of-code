@@ -1,4 +1,11 @@
-module Y2021.Day7 where
+module Y2021.Day7
+    ( someDay7
+    , day7Task1
+    , day7Task2
+    , computeTask1
+    , computeTask2
+    , input
+    ) where
 
 import Data.Foldable (foldl')
 import Data.List (sort)

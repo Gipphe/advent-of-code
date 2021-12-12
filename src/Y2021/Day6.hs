@@ -1,4 +1,11 @@
-module Y2021.Day6 where
+module Y2021.Day6
+    ( someDay6
+    , day6Task1
+    , day6Task2
+    , computeTask1
+    , computeTask2
+    , input
+    ) where
 
 import Control.Arrow ((&&&))
 import Data.List (group, sort)

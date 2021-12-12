@@ -1,4 +1,11 @@
-module Y2021.Day4 where
+module Y2021.Day4
+    ( someDay4
+    , day4Task1
+    , day4Task2
+    , computeTask1
+    , computeTask2
+    , input
+    ) where
 
 import Data.Bifunctor (Bifunctor(second), bimap)
 import Data.List (transpose)

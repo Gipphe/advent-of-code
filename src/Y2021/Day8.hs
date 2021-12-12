@@ -1,4 +1,11 @@
-module Y2021.Day8 where
+module Y2021.Day8
+    ( someDay8
+    , day8Task1
+    , day8Task2
+    , computeTask1
+    , computeTask2
+    , input
+    ) where
 
 import Data.Foldable (foldl')
 import Data.Functor (($>))
@@ -97,17 +104,6 @@ data Message = Message
 data Seg
     = A | B | C | D | E | F | G
     deriving (Eq, Ord, Show)
-
-parseSeg :: Char -> Either String Seg
-parseSeg = \case
-    'a' -> Right A
-    'b' -> Right B
-    'c' -> Right C
-    'd' -> Right D
-    'e' -> Right E
-    'f' -> Right F
-    'g' -> Right G
-    x   -> Left $ "unrecognized seg: " <> show x
 
 newtype Series = Series { getSeries :: Set Seg }
     deriving (Eq, Ord, Show)

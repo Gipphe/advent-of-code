@@ -1,4 +1,11 @@
-module Y2021.Day5 where
+module Y2021.Day5
+    ( someDay5
+    , day5Task1
+    , day5Task2
+    , computeTask1
+    , computeTask2
+    , input
+    ) where
 
 import qualified Data.Map.Strict as M
 import Data.Void (Void)
@@ -37,19 +44,13 @@ doWerk f =
 input :: Field
 input = parseInput day5Input
 
-data Point = Point
-    { cx :: {-# UNPACK #-} !Int
-    , cy :: {-# UNPACK #-} !Int
-    }
+data Point = Point {-# UNPACK #-} !Int {-# UNPACK #-} !Int
     deriving (Eq, Ord)
 
 instance Show Point where
     show (Point x y) = show x <> "," <> show y
 
-data Line = Line
-    { start :: {-# UNPACK #-} !Point
-    , end   :: {-# UNPACK #-} !Point
-    }
+data Line = Line {-# UNPACK #-} !Point {-# UNPACK #-} !Point
     deriving (Eq, Ord)
 
 instance Show Line where

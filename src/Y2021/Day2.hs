@@ -1,4 +1,11 @@
-module Y2021.Day2 where
+module Y2021.Day2
+    ( someDay2
+    , day2Task1
+    , day2Task2
+    , computeTask1
+    , computeTask2
+    , input
+    ) where
 
 import Data.List (isPrefixOf)
 import Data.Maybe (fromMaybe)
