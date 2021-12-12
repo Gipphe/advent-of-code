@@ -26,8 +26,10 @@ source-repository head
 library
   exposed-modules:
       Day
+      Grid
       Lib
       Run
+      Types
       Util
       Y2020
       Y2020.Day1
