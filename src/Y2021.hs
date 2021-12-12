@@ -10,6 +10,7 @@ import Y2021.Day5
 import Y2021.Day6
 import Y2021.Day7
 import Y2021.Day8
+import Y2021.Day9
 import Year
 
 y2021 :: IO ()
@@ -23,4 +24,5 @@ y2021 = runYear
     , someDay6
     , someDay7
     , someDay8
+    , someDay9
     ]

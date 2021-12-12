@@ -61,6 +61,7 @@ library
       Y2021.Day6
       Y2021.Day7
       Y2021.Day8
+      Y2021.Day9
       Y2021.Input
       Year
   other-modules:
@@ -233,6 +234,7 @@ test-suite advent-of-code-test
       Y2021.Day6Spec
       Y2021.Day7Spec
       Y2021.Day8Spec
+      Y2021.Day9Spec
       Paths_advent_of_code
   hs-source-dirs:
       test
