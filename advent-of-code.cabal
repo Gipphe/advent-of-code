@@ -54,6 +54,7 @@ library
       Y2020.Input
       Y2021
       Y2021.Day1
+      Y2021.Day10
       Y2021.Day2
       Y2021.Day3
       Y2021.Day4
@@ -226,6 +227,7 @@ test-suite advent-of-code-test
       Y2020.Day7Spec
       Y2020.Day8Spec
       Y2020.Day9Spec
+      Y2021.Day10Spec
       Y2021.Day1Spec
       Y2021.Day2Spec
       Y2021.Day3Spec
