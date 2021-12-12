@@ -115,7 +115,7 @@ library
       TypeOperators
       ViewPatterns
       UnicodeSyntax
-  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wpartial-fields -Wredundant-constraints -flate-specialise -fspecialise-aggressively -fplugin=Polysemy.Plugin
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wunused-binds -Wunused-imports -Wunused-foralls -Wpartial-fields -Wredundant-constraints -flate-specialise -fspecialise-aggressively -fplugin=Polysemy.Plugin
   build-depends:
       base >=4.7 && <5
     , containers
@@ -185,7 +185,7 @@ executable advent-of-code-exe
       TypeOperators
       ViewPatterns
       UnicodeSyntax
-  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wpartial-fields -Wredundant-constraints -flate-specialise -fspecialise-aggressively -fplugin=Polysemy.Plugin -threaded -rtsopts -with-rtsopts=-N
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wunused-binds -Wunused-imports -Wunused-foralls -Wpartial-fields -Wredundant-constraints -flate-specialise -fspecialise-aggressively -fplugin=Polysemy.Plugin -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       advent-of-code
     , base >=4.7 && <5
@@ -285,7 +285,7 @@ test-suite advent-of-code-test
       TypeOperators
       ViewPatterns
       UnicodeSyntax
-  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wpartial-fields -Wredundant-constraints -flate-specialise -fspecialise-aggressively -fplugin=Polysemy.Plugin -threaded -rtsopts -with-rtsopts=-N
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wunused-binds -Wunused-imports -Wunused-foralls -Wpartial-fields -Wredundant-constraints -flate-specialise -fspecialise-aggressively -fplugin=Polysemy.Plugin -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       advent-of-code
     , base >=4.7 && <5
@@ -360,7 +360,7 @@ benchmark advent-of-code-profile
       TypeOperators
       ViewPatterns
       UnicodeSyntax
-  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wpartial-fields -Wredundant-constraints -flate-specialise -fspecialise-aggressively -fplugin=Polysemy.Plugin -threaded -rtsopts -with-rtsopts=-N
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wunused-binds -Wunused-imports -Wunused-foralls -Wpartial-fields -Wredundant-constraints -flate-specialise -fspecialise-aggressively -fplugin=Polysemy.Plugin -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       advent-of-code
     , base >=4.7 && <5
