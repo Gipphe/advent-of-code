@@ -14,6 +14,7 @@ module Y2021.Input
     , day8ExampleInput
     , day9Input
     , day10Input
+    , day11Input
     ) where
 
 import Data.FileEmbed (embedStringFile)
@@ -56,3 +57,6 @@ day9Input = $(embedStringFile "input/2021/day9.txt")
 
 day10Input :: String
 day10Input = $(embedStringFile "input/2021/day10.txt")
+
+day11Input :: String
+day11Input = $(embedStringFile "input/2021/day11.txt")
