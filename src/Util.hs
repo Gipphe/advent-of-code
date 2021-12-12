@@ -8,13 +8,14 @@ module Util
     , uncurry4
     , chainl1
     , digitsToDecimal
+    , median
     , medianOfMedians
     ) where
 
 import Control.Applicative ((<**>), Alternative(..))
 import Control.Arrow (second)
 import Data.Char (isSpace)
-import Data.List (dropWhileEnd)
+import Data.List (dropWhileEnd, sort)
 
 
 splitOnDoubleNewline :: String -> [String]
@@ -63,6 +64,12 @@ digitsToDecimal = go 0 . reverse
   where
     go _          []       = 0
     go (n :: Int) (x : xs) = x * 10 ^ n + go (n + 1) xs
+
+median :: Ord a => [a] -> a
+median xs = sorted !! middlePoint
+  where
+    sorted      = sort xs
+    middlePoint = length xs `div` 2
 
 medianOfMedians :: [Int] -> Int
 medianOfMedians [] = error "medianOfMedians: empty list"
