@@ -68,6 +68,7 @@ library
       Y2021.Input
       Y2022
       Y2022.Day1
+      Y2022.Day2
       Y2022.Input
       Year
   other-modules:
