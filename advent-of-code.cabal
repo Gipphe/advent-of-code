@@ -1,6 +1,6 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.34.4.
+-- This file has been generated from package.yaml by hpack version 0.35.0.
 --
 -- see: https://github.com/sol/hpack
 
@@ -66,6 +66,9 @@ library
       Y2021.Day8
       Y2021.Day9
       Y2021.Input
+      Y2022
+      Y2022.Day1
+      Y2022.Input
       Year
   other-modules:
       Paths_advent_of_code
