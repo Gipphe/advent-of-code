@@ -5,6 +5,7 @@ module Y2021
 import Y2021.Day1
 import Y2021.Day10
 import Y2021.Day11
+import Y2021.Day12
 import Y2021.Day2
 import Y2021.Day3
 import Y2021.Day4
@@ -29,4 +30,5 @@ y2021 = runYear
     , someDay9
     , someDay10
     , someDay11
+    , someDay12
     ]
