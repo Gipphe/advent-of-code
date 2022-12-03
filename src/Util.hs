@@ -10,12 +10,14 @@ module Util
     , digitsToDecimal
     , median
     , medianOfMedians
+    , traceShowLabelId
     ) where
 
 import Control.Applicative ((<**>), Alternative(..))
 import Control.Arrow (second)
 import Data.Char (isSpace)
 import Data.List (dropWhileEnd, sort)
+import Debug.Trace (trace)
 
 
 splitOnDoubleNewline :: String -> [String]
@@ -151,3 +153,6 @@ partition5 xs left right = ((left + right) `div` 2, gone)
     go2 j list
         | j > left && xs !! (j - 1) > xs !! j = go2 (j - 1) (swap xs (j - 1) j)
         | otherwise = list
+
+traceShowLabelId :: Show a => String -> a -> a
+traceShowLabelId label a = trace (label <> show a) a

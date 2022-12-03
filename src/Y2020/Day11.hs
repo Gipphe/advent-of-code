@@ -8,7 +8,6 @@ import Data.Maybe (fromMaybe, mapMaybe)
 import Data.Vector ((!?), Vector)
 import qualified Data.Vector as Vec
 import Data.Void (Void)
-import Debug.Trace (trace)
 import Text.Megaparsec (Parsec, parse, sepEndBy, some)
 import Text.Megaparsec.Char (char, eol)
 
@@ -167,6 +166,3 @@ adjustV i f = Vec.imap mapFn
         | otherwise = x
 
 type Parser = Parsec Void String
-
-traceShowLabelId :: Show a => String -> a -> a
-traceShowLabelId label a = trace (label <> show a) a
