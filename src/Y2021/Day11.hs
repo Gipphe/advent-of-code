@@ -2,6 +2,7 @@ module Y2021.Day11
     ( someDay11
     , day11Task1
     , computeTask1
+    , computeTask2
     , input
     ) where
 

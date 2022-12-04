@@ -241,6 +241,10 @@ test-suite advent-of-code-test
       Y2021.Day7Spec
       Y2021.Day8Spec
       Y2021.Day9Spec
+      Y2022.Day1Spec
+      Y2022.Day2Spec
+      Y2022.Day3Spec
+      Y2022.Day4Spec
       Paths_advent_of_code
   hs-source-dirs:
       test

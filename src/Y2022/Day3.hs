@@ -1,7 +1,7 @@
 module Y2022.Day3
     ( someDay3
-    , day3Task1
     , computeTask1
+    , computeTask2
     , input
     ) where
 
