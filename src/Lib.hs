@@ -3,16 +3,36 @@ module Lib
     ) where
 
 import Data.List (intersperse)
+import Data.Map.Strict (Map)
+import qualified Data.Map.Strict as M
+import qualified Data.Set as S
 
+import Args (Selection, daySelection, evalSelection, parseArgs, yearSelection)
 import Data.Foldable (sequenceA_)
--- import Y2020
--- import Y2021
+import System.Environment (getArgs)
+import Y2020
+import Y2021
 import Y2022
 
 main :: IO ()
 main = do
-    sequenceA_ $ intersperse
-        (putStrLn "\n---------------\n")
-        [ --y2020,
-         -- y2021,
-         y2022]
+    args <- parseArgs <$> getArgs
+    case args of
+        Left err -> error err
+        Right opts ->
+            let
+                selection     = evalSelection (yearSelection opts)
+                selectedYears = if S.size selection == 0
+                    then years
+                    else M.restrictKeys
+                        years
+                        (evalSelection (yearSelection opts))
+            in
+                sequenceA_
+                $ intersperse (putStrLn "\n---------------\n")
+                . fmap ($ daySelection opts)
+                . M.elems
+                $ selectedYears
+
+years :: Map Int (Selection -> IO ())
+years = M.fromList [(2020, y2020), (2021, y2021), (2022, y2022)]

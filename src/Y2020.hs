@@ -2,6 +2,7 @@ module Y2020
     ( y2020
     ) where
 
+import Args (Selection)
 import Y2020.Day1
 import Y2020.Day10
 import Y2020.Day11
@@ -23,7 +24,7 @@ import Y2020.Day8
 import Y2020.Day9
 import Year
 
-y2020 :: IO ()
+y2020 :: Selection -> IO ()
 y2020 = runYear
     2020
     [ someDay1

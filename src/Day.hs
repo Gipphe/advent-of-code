@@ -1,6 +1,7 @@
 module Day
     ( SomeDay(..)
     , runSomeDay
+    , someDayNumber
     , Day
     , runDay'
     , runDay
@@ -26,6 +27,13 @@ data SomeDay = forall n . KnownNat n => SomeDay (Day n ())
 
 runSomeDay :: SomeDay -> IO ()
 runSomeDay (SomeDay day) = runDay day
+
+-- | Returns the day number of the contains Day in the SomeDay.
+someDayNumber :: SomeDay -> Int
+someDayNumber (SomeDay day) = go day
+  where
+    go :: forall n a . KnownNat n => Day n a -> Int
+    go _ = fromInteger $ natVal (Proxy @n)
 
 -- | A given day with its day number.
 newtype Day (n :: Nat) a = Day { runDay' :: IO a }

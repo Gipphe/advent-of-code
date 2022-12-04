@@ -13,18 +13,13 @@ extra-source-files:
 description: Please see the README on GitHub at <https://github.com/Gipphe/advent-of-code#readme>
 
 dependencies:
-  - name: base
-    version: ">= 4.7 && < 5"
-    # mixin:
-    #   - hiding (Prelude)
+  - base >= 4.7 && < 5
   - containers
   - deepseq
   - file-embed
   - hashable
   - megaparsec
   - parser-combinators
-  - polysemy
-  - polysemy-plugin
   - table-layout
   - text
   - time
@@ -93,7 +88,6 @@ ghc-options:
   # Optimizations
   - -flate-specialise
   - -fspecialise-aggressively
-  - -fplugin=Polysemy.Plugin # Broken on Windows for the time being
 
 library:
   source-dirs: src

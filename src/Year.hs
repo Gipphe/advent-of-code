@@ -3,18 +3,28 @@ module Year
     ) where
 
 import Data.List (intersperse)
+import qualified Data.Map.Strict as M
+import qualified Data.Set as S
 import Data.Time.Clock.POSIX (getPOSIXTime)
 
-import Day (SomeDay, runSomeDay)
+import Args (Selection, evalSelection)
+import Day (SomeDay, runSomeDay, someDayNumber)
 
-runYear :: Int -> [SomeDay] -> IO ()
-runYear year days = do
+runYear :: Int -> [SomeDay] -> Selection -> IO ()
+runYear year days daySelection = do
     putStrLn $ "## Year " <> show year
     startTime <- getPOSIXTime
-    sequence_ $ intersperse (putStrLn "\n") $ runSomeDay <$> days
+    sequence_ $ intersperse (putStrLn "\n") $ runSomeDay <$> selectedDays
     endTime <- getPOSIXTime
     putStrLn
         $  "\n\nTook "
         <> show (endTime - startTime)
         <> " to run year "
         <> show year
+  where
+    selection    = evalSelection daySelection
+    selectedDays = if S.size selection == 0
+        then days
+        else M.elems $ M.restrictKeys
+            (M.fromList $ fmap (\d -> (someDayNumber d, d)) days)
+            (evalSelection daySelection)
