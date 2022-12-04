@@ -133,7 +133,6 @@ library
     , hashable
     , megaparsec
     , parser-combinators
-    , table-layout
     , text
     , time
     , vector
@@ -202,7 +201,6 @@ executable advent-of-code-exe
     , hashable
     , megaparsec
     , parser-combinators
-    , table-layout
     , text
     , time
     , vector
@@ -302,7 +300,6 @@ test-suite advent-of-code-test
     , hashable
     , megaparsec
     , parser-combinators
-    , table-layout
     , tasty
     , tasty-discover
     , tasty-hunit
@@ -375,7 +372,6 @@ benchmark advent-of-code-profile
     , hashable
     , megaparsec
     , parser-combinators
-    , table-layout
     , text
     , time
     , vector

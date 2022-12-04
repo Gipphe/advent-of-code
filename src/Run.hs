@@ -2,8 +2,8 @@ module Run where
 
 import Data.Time (NominalDiffTime)
 import Data.Time.Clock.POSIX (getPOSIXTime)
-import Text.Layout.Table
-    (Default(..), numCol, rowsG, tableString, titlesH, unicodeS)
+-- import Text.Layout.Table
+--     (Default(..), numCol, rowsG, tableString, titlesH, unicodeS)
 
 data Year' day = Year
     { yearNumber :: !Int
@@ -57,21 +57,21 @@ runTask t = do
     end    <- getPOSIXTime
     pure $ Timed (end - start) $ Evaluated result t
 
-showYear :: Timed (Year' (Timed (Day' (Timed (Evaluated Task))))) -> String
-showYear (Timed yearTime (Year yearNum days)) =
-    yearHeading <> "\n" <> tableString
-        [def, numCol, numCol]
-        unicodeS
-        (titlesH ["Task", "Result", "Time"])
-        (rowGroupDay <$> days)
-  where
-    yearHeading = "Year " <> show yearNum <> ": " <> show yearTime
-    rowGroupDay (Timed dayTime (Day dayNumber tasks)) =
-        rowsG
-            $ ["Day " <> show dayNumber, "", show dayTime]
-            : (rowTask dayNumber <$> tasks)
-    rowTask dayNumber (Timed taskTime (Evaluated result (Task taskNumber _))) =
-        [ "Day " <> show dayNumber <> " Task " <> show taskNumber
-        , show result
-        , show taskTime
-        ]
+-- showYear :: Timed (Year' (Timed (Day' (Timed (Evaluated Task))))) -> String
+-- showYear (Timed yearTime (Year yearNum days)) =
+--     yearHeading <> "\n" <> tableString
+--         [def, numCol, numCol]
+--         unicodeS
+--         (titlesH ["Task", "Result", "Time"])
+--         (rowGroupDay <$> days)
+--   where
+--     yearHeading = "Year " <> show yearNum <> ": " <> show yearTime
+--     rowGroupDay (Timed dayTime (Day dayNumber tasks)) =
+--         rowsG
+--             $ ["Day " <> show dayNumber, "", show dayTime]
+--             : (rowTask dayNumber <$> tasks)
+--     rowTask dayNumber (Timed taskTime (Evaluated result (Task taskNumber _))) =
+--         [ "Day " <> show dayNumber <> " Task " <> show taskNumber
+--         , show result
+--         , show taskTime
+--         ]
