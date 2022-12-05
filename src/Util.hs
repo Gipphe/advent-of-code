@@ -11,6 +11,7 @@ module Util
     , median
     , medianOfMedians
     , traceShowLabelId
+    , headMaybe
     ) where
 
 import Control.Applicative ((<**>), Alternative(..))
@@ -156,3 +157,8 @@ partition5 xs left right = ((left + right) `div` 2, gone)
 
 traceShowLabelId :: Show a => String -> a -> a
 traceShowLabelId label a = trace (label <> show a) a
+
+headMaybe :: [a] -> Maybe a
+headMaybe xs
+    | null xs   = Nothing
+    | otherwise = Just (head xs)
