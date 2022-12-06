@@ -5,6 +5,7 @@ module Y2022.Day5
     , input
     ) where
 
+import Data.Char (isAlpha)
 import Data.List (transpose)
 import Data.Maybe (mapMaybe)
 import Data.Vector (Vector)
@@ -99,26 +100,16 @@ parseCrates =
     (V.singleton (Stack []) <>)
         . V.fromList
         . fmap (parseStack . reverse)
-        . trimCrates
+        . filter (not . null)
+        . fmap (filter isAlpha)
         . transpose
         . lines
-
-trimCrates :: [String] -> [String]
-trimCrates = go False . drop 1
-  where
-    go doDrop (x : y : z : rest)
-        | doDrop    = go False rest
-        | otherwise = x : go True (y : z : rest)
-    go doDrop (x : y : rest)
-        | doDrop    = go False rest
-        | otherwise = x : go True (y : rest)
-    go _ _ = []
 
 newtype Stack = Stack { getStack :: [Crate] }
     deriving (Show) via [Crate]
 
 parseStack :: String -> Stack
-parseStack = Stack . reverse . fmap Crate . filter (/= ' ') . drop 1
+parseStack = Stack . reverse . fmap Crate
 
 pushStack :: Crate -> Stack -> Stack
 pushStack x = Stack . (x :) . getStack
