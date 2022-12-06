@@ -27,3 +27,6 @@ day5Input = $(embedStringFile "input/2022/day5.txt")
 
 day5ExampleInput :: String
 day5ExampleInput = $(embedStringFile "input/2022/day5.example.txt")
+
+day6Input :: String
+day6Input = $(embedStringFile "input/2022/day6.txt")
