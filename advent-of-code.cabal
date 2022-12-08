@@ -74,6 +74,7 @@ library
       Y2022.Day4
       Y2022.Day5
       Y2022.Day6
+      Y2022.Day7
       Y2022.Input
       Year
   other-modules:
@@ -249,6 +250,7 @@ test-suite advent-of-code-test
       Y2022.Day4Spec
       Y2022.Day5Spec
       Y2022.Day6Spec
+      Y2022.Day7Spec
       Paths_advent_of_code
   hs-source-dirs:
       test
