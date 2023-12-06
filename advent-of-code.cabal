@@ -79,6 +79,7 @@ library
       Y2022.Input
       Y2023
       Y2023.Day1
+      Y2023.Day2
       Y2023.Input
       Year
   other-modules:
@@ -111,6 +112,7 @@ library
       GADTs
       GeneralizedNewtypeDeriving
       InstanceSigs
+      ImportQualifiedPost
       KindSignatures
       LambdaCase
       MultiParamTypeClasses
@@ -178,6 +180,7 @@ executable advent-of-code-exe
       GADTs
       GeneralizedNewtypeDeriving
       InstanceSigs
+      ImportQualifiedPost
       KindSignatures
       LambdaCase
       MultiParamTypeClasses
@@ -285,6 +288,7 @@ test-suite advent-of-code-test
       GADTs
       GeneralizedNewtypeDeriving
       InstanceSigs
+      ImportQualifiedPost
       KindSignatures
       LambdaCase
       MultiParamTypeClasses
@@ -357,6 +361,7 @@ benchmark advent-of-code-profile
       GADTs
       GeneralizedNewtypeDeriving
       InstanceSigs
+      ImportQualifiedPost
       KindSignatures
       LambdaCase
       MultiParamTypeClasses

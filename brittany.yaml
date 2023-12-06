@@ -25,6 +25,7 @@ conf_forward:
     - -XGADTs
     - -XGeneralizedNewtypeDeriving
     - -XInstanceSigs
+    - -XImportQualifiedPost
     - -XKindSignatures
     - -XLambdaCase
     - -XMultiParamTypeClasses

@@ -50,6 +50,7 @@ default-extensions:
   - GADTs
   - GeneralizedNewtypeDeriving
   - InstanceSigs
+  - ImportQualifiedPost
   - KindSignatures
   - LambdaCase
   - MultiParamTypeClasses
